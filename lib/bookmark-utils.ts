@@ -21,7 +21,7 @@ export async function getUserBookmarks(userId: string): Promise<Bookmark[]> {
 }
 
 
-export async function createUserBookmark(userId: string, data: CreateBookmarkData): Promise<Bookmark[]> {
+export async function createUserBookmark(userId: string, data: CreateBookmarkData): Promise<Bookmark> {
     try {
         if (!data.url || !data.title) {
             throw new Error("URL and title are required");
