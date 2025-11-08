@@ -24,7 +24,7 @@ export default function RootLayout({
                 <button className="btn btn-primary">Sign In</button>
               </SignInButton>
               <SignUpButton>
-                <button className="btn btn-secondary">Sign Up</button>
+                <button className="btn btn-primary">Sign Up</button>
               </SignUpButton>
             </SignedOut>
             <SignedIn>

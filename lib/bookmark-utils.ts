@@ -37,7 +37,7 @@ export async function createUserBookmark(userId: string, data: CreateBookmarkDat
         return bookmark;
     } catch (error) {
         console.error("Error creating bookmark:", error);
-        throw new Error("Failed to create bookmark");
+        throw error;
     }
 }
 
@@ -56,7 +56,7 @@ export async function deleteUserBookmark(userId:string , bookmarkId:string):Prom
         await prisma.bookmark.delete({
             where:{
                 id:bookmarkId,
-                userId,
+                //userId,
             }
         })
         return true;
