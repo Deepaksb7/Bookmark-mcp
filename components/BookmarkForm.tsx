@@ -47,7 +47,7 @@ export default function BookmarkForm({ onSubmit, initialData, isSubmitting = fal
             <label htmlFor="notes" className="form-label">
                 Notes
             </label>
-            <input type="text" id="notes" onChange={(e) => setFormData((prev) => ({ ...prev, notes: e.target.value }))} className="form-input" placeholder="Enter Any Notes" required disabled={isSubmitting} />
+            <input type="text" id="notes" onChange={(e) => setFormData((prev) => ({ ...prev, notes: e.target.value }))} className="form-input" placeholder="Enter Any Notes" disabled={isSubmitting} />
         </div>
 
         <button type="submit" className="btn btn-primary" disabled={isSubmitting}>

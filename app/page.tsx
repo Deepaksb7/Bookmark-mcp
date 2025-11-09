@@ -5,6 +5,7 @@ import { useBookmarks } from "@/hooks/useBookMarks";
 import { CreateBookmarkData } from "@/types/bookmark";
 import styles from "./page.module.css";
 import BookmarkForm from "@/components/BookmarkForm";
+import BookmarkList from "@/components/BookmarkList";
 
 export default function Home() {
   const {bookmarks,loading,error ,addBookmark, deleteBookmark,refetch} = useBookmarks()
@@ -78,6 +79,8 @@ export default function Home() {
           {showAddForm && <div className={styles["form-section"]}>
             <BookmarkForm onSubmit={handleAddBookmark} isSubmitting={isSubmitting} />
             </div>}
+
+          <BookmarkList bookmarks={bookmarks} onDelete={handleDeleteBookmark} />
 
       </SignedIn>
       <SignedOut>
