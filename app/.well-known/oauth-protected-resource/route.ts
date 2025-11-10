@@ -10,3 +10,6 @@ const handler = protectedResourceHandlerClerk({
 const corsHandler = metadataCorsOptionsRequestHandler()
 
 export { handler as GET, corsHandler as OPTIONS }
+
+
+
